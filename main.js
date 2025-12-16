@@ -1,21 +1,18 @@
 import './src/style.css'
 
-// Mobile Menu - Minimal approach
+// Mobile Menu - Super simple
 const mobileBtn = document.getElementById('mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 const closeBtn = document.querySelector('.menu-close-btn');
-const overlay = document.querySelector('.menu-overlay');
 
-function openMenu() {
-    navLinks?.classList.add('active');
-    overlay?.classList.add('active');
+if (mobileBtn) {
+    mobileBtn.addEventListener('click', () => {
+        navLinks.classList.add('active');
+    });
 }
 
-function closeMenu() {
-    navLinks?.classList.remove('active');
-    overlay?.classList.remove('active');
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
 }
-
-mobileBtn?.addEventListener('click', openMenu);
-closeBtn?.addEventListener('click', closeMenu);
-overlay?.addEventListener('click', closeMenu);
