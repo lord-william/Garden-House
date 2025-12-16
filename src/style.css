@@ -150,6 +150,39 @@ h4 {
   transition: transform 0.3s ease;
 }
 
+@media (max-width: 768px) {
+
+  /* Reduce header padding on mobile */
+  header {
+    padding-top: 120px !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Adjust typography */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  h1.section-title {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Lightbox navigation hidden on mobile */
+  .lightbox-nav {
+    display: none;
+  }
+
+  /* Ensure gallery items are sized correctly */
+  .gallery-item {
+    flex: 0 0 85%;
+    height: 250px;
+  }
+}
+
 .lightbox-close {
   position: absolute;
   top: 20px;

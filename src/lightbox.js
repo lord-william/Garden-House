@@ -1,12 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Lightbox Functionality
+(function initLightbox() {
     const galleryItems = document.querySelectorAll('.gallery-item img');
     const body = document.body;
     let currentIndex = 0;
     let lightbox = null;
     let lightboxImg = null;
 
+    if (galleryItems.length === 0) {
+        console.warn('No gallery items found for lightbox');
+        return;
+    }
+
     // Create Lightbox HTML
     const createLightbox = () => {
+        // Check if valid first
+        if (document.querySelector('.lightbox')) return;
+
         const lightboxDiv = document.createElement('div');
         lightboxDiv.className = 'lightbox';
         lightboxDiv.innerHTML = `
@@ -29,8 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Navigation events
-        lightbox.querySelector('.lightbox-prev').addEventListener('click', () => changeSlide(-1));
-        lightbox.querySelector('.lightbox-next').addEventListener('click', () => changeSlide(1));
+        lightbox.querySelector('.lightbox-prev').addEventListener('click', (e) => {
+            e.stopPropagation();
+            changeSlide(-1)
+        });
+        lightbox.querySelector('.lightbox-next').addEventListener('click', (e) => {
+            e.stopPropagation();
+            changeSlide(1)
+        });
 
         // Keyboard events
         document.addEventListener('keydown', (e) => {
@@ -61,6 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openLightbox = (index) => {
         if (!lightbox) createLightbox();
+        // Re-select in case something changed
+        lightbox = document.querySelector('.lightbox');
+        lightboxImg = lightbox.querySelector('.lightbox-img');
+
         currentIndex = index;
         updateImage();
         lightbox.classList.add('active');
@@ -68,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const closeLightbox = () => {
-        lightbox.classList.remove('active');
+        if (lightbox) lightbox.classList.remove('active');
         body.style.overflow = '';
     };
 
@@ -80,20 +99,22 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const updateImage = () => {
-        // Determine the high-res source (could simply be the current src for now)
         const src = galleryItems[currentIndex].src;
-
-        // Add fade effect
         lightboxImg.style.opacity = 0;
         setTimeout(() => {
             lightboxImg.src = src;
             lightboxImg.style.opacity = 1;
-        }, 200);
+        }, 150);
     };
 
-    // Attach click events to gallery items
+    // Attach click events
     galleryItems.forEach((item, index) => {
         item.style.cursor = 'pointer';
-        item.addEventListener('click', () => openLightbox(index));
+        item.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default if wrapped in anchor
+            openLightbox(index);
+        });
     });
-});
+
+    console.log('Lightbox initialized with', galleryItems.length, 'items');
+})();
