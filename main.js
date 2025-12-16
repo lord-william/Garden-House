@@ -22,10 +22,13 @@ const mobileBtn = document.getElementById('mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
 if (mobileBtn) {
-    // Create Overlay dynamically
-    const overlay = document.createElement('div');
-    overlay.className = 'menu-overlay';
-    document.body.appendChild(overlay);
+    // Create Overlay dynamically if it doesn't exist
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+    }
 
     const toggleMenu = (show) => {
         if (show) {
