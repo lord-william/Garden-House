@@ -1,0 +1,42 @@
+:root {
+  /* Premium Palette */
+  --color-primary: #1A3C34; /* Deep Forest Green */
+  --color-primary-light: #2C5F52;
+  --color-secondary: #D4AF37; /* Gold */
+  --color-secondary-hover: #F2C94C;
+  --color-accent: #E8F5E9; /* Soft Pale Green */
+  --color-bg-dark: #0F1C18;
+  --color-bg-light: #FAFAF9; /* Warm White */
+  
+  --color-text-main: #1A1A1A;
+  --color-text-light: #F5F5F5;
+  --color-text-muted: #666666;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Effects */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-blur: blur(12px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-main: #F5F5F5;
+    --color-bg-light: #0F1C18;
+    --glass-bg: rgba(15, 28, 24, 0.85);
+  }
+}

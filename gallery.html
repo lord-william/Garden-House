@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Helper</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+            background: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 0.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        p {
+            word-break: break-all;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Select the "Outside" Image</h1>
+
+    <h2>Kanyamazane Images</h2>
+    <div class="grid" id="kanyamazane-grid"></div>
+
+    <h2>eNtokozweni Images</h2>
+    <div class="grid" id="entokozweni-grid"></div>
+
+    <script>
+        // List of files (manually populated based on file existence/list_dir)
+        const kanyamazaneFiles = [
+            'IMG-20251216-WA0195.jpg', 'IMG-20251216-WA0196.jpg', 'IMG-20251216-WA0197.jpg',
+            'IMG-20251216-WA0198.jpg', 'IMG-20251216-WA0199.jpg', 'IMG-20251216-WA0200.jpg',
+            'IMG-20251216-WA0201.jpg', 'WhatsApp Image 2025-12-16 at 17.56.07_f4147257.jpg',
+            'kanyamazane-1.jpg'
+        ];
+
+        const entokozweniFiles = [
+            'IMG-20251216-WA0196.jpg', 'IMG-20251216-WA0197.jpg', 'IMG-20251216-WA0198.jpg',
+            'IMG-20251216-WA0199.jpg', 'WhatsApp Image 2025-12-16 at 17.54.50_37533e14.jpg',
+            'entokozweni-1.jpg', 'entokozweni-2.jpg'
+        ];
+
+        const kGrid = document.getElementById('kanyamazane-grid');
+        kanyamazaneFiles.forEach(file => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `<img src="/assets/kanyamazane/${file}" onerror="this.parentElement.style.display='none'"><p>${file}</p>`;
+            kGrid.appendChild(card);
+        });
+
+        const eGrid = document.getElementById('entokozweni-grid');
+        entokozweniFiles.forEach(file => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `<img src="/assets/entokozweni/${file}" onerror="this.parentElement.style.display='none'"><p>${file}</p>`;
+            eGrid.appendChild(card);
+        });
+    </script>
+</body>
+
+</html>

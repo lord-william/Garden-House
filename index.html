@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Premium student accommodation in Kanyamazane and eNtokozweni. Secure, comfortable, and study-friendly living." />
+  <title>Garden House | Premium Student Interior</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="glass-card"
+    style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center;">
+      <img src="/assets/logo.png" alt="Garden House Logo" style="height: 75px; object-fit: contain;">
+    </div>
+    <div class="nav-links" style="display: flex; gap: 2rem; align-items: center;">
+      <a href="#home" style="text-decoration: none; color: var(--color-primary); font-weight: 500;">Home</a>
+      <a href="#locations" style="text-decoration: none; color: var(--color-primary); font-weight: 500;">Locations</a>
+      <a href="#amenities" style="text-decoration: none; color: var(--color-primary); font-weight: 500;">Amenities</a>
+      <a href="#contact" class="btn" style="padding: 10px 24px; font-size: 0.8rem;">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home"
+    style="height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(15, 28, 24, 0.6), rgba(15, 28, 24, 0.4)), url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center;">
+    <div class="container" style="text-align: center; color: white;">
+      <h1 style="font-size: 4.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+        Elevate Your <br />
+        <span style="color: var(--color-secondary);">Student Lifestyle</span>
+      </h1>
+      <p
+        style="font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+        Secure, comfortable, and study-focused accommodation in Kanyamazane and eNtokozweni.
+        <br><strong style="color: var(--color-secondary);">NSFAS Approved</strong>
+      </p>
+      <a href="#contact" class="btn"
+        style="background: var(--color-secondary); color: var(--color-primary); border: none;">Secure Your Space</a>
+    </div>
+  </header>
+
+  <!-- Locations Section -->
+  <section id="locations" style="padding: var(--spacing-xl) 0; background: var(--color-accent);">
+    <div class="container">
+      <h2 class="section-title">Our Premium <span>Locations</span></h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem;">
+
+        <!-- Location 1 -->
+        <div class="glass-card" style="overflow: hidden; background: white; transition: transform 0.3s ease;">
+          <div style="height: 280px; background: url('/assets/kanyamazane/kanyamazane-outside.jpg') center/cover;">
+          </div>
+          <div style="padding: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="color: var(--color-primary); font-size: 1.8rem;">Kanyamazane</h3>
+              <span
+                style="background: var(--color-primary); color: var(--color-secondary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Stand
+                645</span>
+            </div>
+            <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+              Located in the heart of Kanyamazane, just a short walk to the Shopping Complex.
+              Experience convenience with nearby Police Station and local clinics.
+            </p>
+            <ul style="list-style: none; margin-bottom: 2rem;">
+              <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="ph-fill ph-check-circle" style="color: var(--color-secondary); font-size: 1.2rem;"></i>
+                Walking distance to shops
+              </li>
+              <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="ph-fill ph-bus" style="color: var(--color-secondary); font-size: 1.2rem;"></i> Near Taxi & Bus
+                station
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="glass-card" style="overflow: hidden; background: white; transition: transform 0.3s ease;">
+          <div style="height: 280px; background: url('/assets/entokozweni/entokozweni-outside.jpg') center/cover;">
+          </div>
+          <div style="padding: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+              <h3 style="color: var(--color-primary); font-size: 1.8rem;">eNtokozweni</h3>
+              <span
+                style="background: var(--color-primary); color: var(--color-secondary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Stand
+                1101</span>
+            </div>
+            <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+              Situated at 1105 eNtokozweni with immediate access to main roads.
+              Enjoy the proximity to Entokozweni Shopping Centre.
+            </p>
+            <ul style="list-style: none; margin-bottom: 2rem;">
+              <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="ph-fill ph-road-horizon" style="color: var(--color-secondary); font-size: 1.2rem;"></i> Easy
+                main road access
+              </li>
+              <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="ph-fill ph-bus" style="color: var(--color-secondary); font-size: 1.2rem;"></i> Near Taxi & Bus
+                station
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section -->
+  <section id="amenities" style="padding: var(--spacing-xl) 0;">
+    <div class="container">
+      <h2 class="section-title">World-Class <span>Amenities</span></h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+
+        <!-- Amenity Cards -->
+        <div class="glass-card" style="padding: 2.5rem; text-align: center; transition: all 0.3s ease;">
+          <i class="ph-duotone ph-wifi-high"
+            style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1.5rem;"></i>
+          <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Uncapped WiFi</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">High-speed fibre connectivity for all your
+            research and study needs.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2.5rem; text-align: center; transition: all 0.3s ease;">
+          <i class="ph-duotone ph-lightning"
+            style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1.5rem;"></i>
+          <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Backup Power</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">Stay powered up. Never be left in the dark
+            during loadshedding.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2.5rem; text-align: center; transition: all 0.3s ease;">
+          <i class="ph-duotone ph-shield-check"
+            style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1.5rem;"></i>
+          <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">24/7 Security</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">CCTV cameras, secure perimeter, and controlled
+            access for peace of mind.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2.5rem; text-align: center; transition: all 0.3s ease;">
+          <i class="ph-duotone ph-bed"
+            style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1.5rem;"></i>
+          <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Fully Furnished</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">Includes comfortable Bed, Study Desk, Chair,
+            and Wardrobe.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2.5rem; text-align: center; transition: all 0.3s ease;">
+          <i class="ph-duotone ph-plant"
+            style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1.5rem;"></i>
+          <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Outdoor Sitting Area</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">A peaceful outdoor space for students to relax
+            and unwind.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2.5rem; text-align: center; transition: all 0.3s ease;">
+          <i class="ph-duotone ph-cooking-pot"
+            style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1.5rem;"></i>
+          <h4 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Modern Kitchen</h4>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted);">Fully equipped communal kitchens with Stove,
+            Fridge, and Microwave.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" style="background: var(--color-primary); color: white; padding: var(--spacing-lg) 0;">
+    <div class="container"
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+
+      <div>
+        <div style="margin-bottom: 1.5rem;">
+          <img src="/assets/logo.png" alt="Garden House Logo" style="height: 90px; object-fit: contain;">
+        </div>
+        <p style="opacity: 0.8; margin-bottom: 1.5rem;">
+          The premier choice for University of Mpumalanga students seeking a balance of academic focus and comfortable
+          living.
+        </p>
+
+      </div>
+
+      <div>
+        <h4 style="color: var(--color-secondary); margin-bottom: 1.5rem; font-size: 1.2rem;">Contact Us</h4>
+        <p style="margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+          <i class="ph-fill ph-phone"></i> +27 84 989 1104
+        </p>
+        <p style="margin-bottom: 1.5rem; opacity: 0.8;">Both our Kanyamazane and eNtokozweni branches are ready to
+          welcome you.</p>
+        <a href="tel:+27849891104" class="btn"
+          style="background: white; color: var(--color-primary); border: none;">Call Now</a>
+      </div>
+
+    </div>
+    <div class="container"
+      style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.6; font-size: 0.9rem;">
+      &copy; 2025 Garden House Student Accommodation. All rights reserved.
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
