@@ -308,7 +308,11 @@ h4 {
     margin: 1rem 2rem;
     width: auto;
     text-align: center;
+    color: white !important;
+    /* Ensure button text is visible */
+    background: var(--color-primary);
   }
+}
 }
 
 @keyframes slideDown {
