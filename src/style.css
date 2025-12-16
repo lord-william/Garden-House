@@ -194,6 +194,11 @@ h4 {
   display: none;
 }
 
+/* Hide close button on desktop */
+.menu-close-btn {
+  display: none;
+}
+
 .menu-overlay {
   display: none;
   position: fixed;
@@ -285,6 +290,8 @@ h4 {
 
   /* Close button */
   .menu-close-btn {
+    display: block;
+    /* Show on mobile */
     align-self: flex-end;
     background: none;
     border: none;
