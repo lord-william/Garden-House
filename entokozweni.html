@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="eNtokozweni Student Accommodation - Garden House" />
+    <title>eNtokozweni | Garden House</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="glass-card"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center;">
+            <a href="index.html">
+                <img src="/assets/logo.png" alt="Garden House Logo" style="height: 120px; object-fit: contain;">
+            </a>
+        </div>
+        <div class="nav-links" style="display: flex; gap: 2rem; align-items: center;">
+            <a href="index.html#home"
+                style="text-decoration: none; color: var(--color-primary); font-weight: 500;">Home</a>
+            <a href="index.html#locations"
+                style="text-decoration: none; color: var(--color-primary); font-weight: 500;">Locations</a>
+            <a href="index.html#contact" class="btn" style="padding: 10px 24px; font-size: 0.8rem;">Apply Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Header -->
+    <header style="padding-top: 180px; padding-bottom: 4rem; text-align: center; background: var(--color-accent);">
+        <div class="container">
+            <h1 class="section-title">Garden House <br><span>eNtokozweni</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--color-text-muted);">
+                Stand 1101 • Immediate access to main roads
+            </p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section style="padding: 2rem 0;">
+        <div class="container">
+            <h3 style="margin-bottom: 1.5rem; color: var(--color-primary);">Gallery</h3>
+
+            <div class="gallery-scroll">
+                <!-- Gallery Items generated from verified file list -->
+                <div class="gallery-item"><img src="/assets/entokozweni/entokozweni-outside.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0202.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0203.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0205.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0206.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0207.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0208.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0209.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0210.jpg" loading="lazy"></div>
+                <div class="gallery-item"><img src="/assets/entokozweni/IMG-20251216-WA0211.jpg" loading="lazy"></div>
+            </div>
+
+            <p style="text-align: center; font-size: 0.9rem; color: var(--color-text-muted); margin-top: 1rem;">
+                <i class="ph-bold ph-hand-swipe-left"></i> Swipe to see more
+            </p>
+        </div>
+    </section>
+
+    <!-- Details & Amenities -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="glass-card" style="padding: 2.5rem; background: white;">
+                <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">About this Location</h3>
+                <p style="margin-bottom: 2rem; color: var(--color-text-muted);">
+                    Situated at 1105 eNtokozweni, this location offers immediate access to main roads and is
+                    conveniently close to the Entokozweni Shopping Centre.
+                </p>
+
+                <h4 style="color: var(--color-secondary); margin-bottom: 1rem;">Key Features</h4>
+                <ul
+                    style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <li style="display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="ph-fill ph-road-horizon" style="color: var(--color-secondary);"></i> Easy main road
+                        access
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="ph-fill ph-bus" style="color: var(--color-secondary);"></i> Near Taxi & Bus station
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="ph-fill ph-wifi-high" style="color: var(--color-secondary);"></i> Uncapped WiFi
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="ph-fill ph-shield-check" style="color: var(--color-secondary);"></i> 24/7 Security
+                    </li>
+                </ul>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="index.html#contact" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--color-primary); color: white; padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <div style="margin-bottom: 1.5rem;">
+                <img src="/assets/logo.png" alt="Garden House Logo" style="height: 90px; object-fit: contain;">
+            </div>
+            <p>&copy; 2025 Garden House Student Accommodation</p>
+        </div>
+    </footer>
+
+    <script src="./src/lightbox.js"></script>
+</body>
+
+</html>
