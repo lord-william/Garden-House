@@ -269,7 +269,6 @@ h4 {
   /* Sidebar Drawer */
   .nav-links {
     display: none;
-    /* Hidden by default */
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -279,10 +278,25 @@ h4 {
     max-width: 300px;
     background: white;
     z-index: 2000;
-    padding: 80px 0 2rem 0;
-    /* Top padding for header clearance */
+    padding: 1rem 0 2rem 0;
     gap: 0;
     box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Close button */
+  .menu-close-btn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu-close-btn:hover {
+    color: var(--color-secondary);
   }
 
   .nav-links.active {
