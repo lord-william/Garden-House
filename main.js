@@ -1,21 +1,7 @@
 import './src/style.css'
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        // Allow default behavior for across-page links (containing .html)
-        const href = this.getAttribute('href');
-        if (href.includes('.html')) return;
+// Navigation is now handled by full page URLs, no smooth scroll needed
 
-        e.preventDefault();
-        document.querySelector(href).scrollIntoView({
-            behavior: 'smooth'
-        });
-
-        // Close mobile menu if open
-        document.querySelector('.nav-links').classList.remove('active');
-    });
-});
 
 // Mobile Menu Toggle - ONLY on mobile
 const mobileBtn = document.getElementById('mobile-menu-btn');
