@@ -268,79 +268,46 @@ h4 {
 
   /* Sidebar Drawer */
   .nav-links {
-    display: flex;
+    display: none;
+    /* Hidden by default */
     flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
-    /* Slide from left */
     height: 100vh;
     width: 80%;
-    /* Don't fill whole page */
     max-width: 300px;
     background: white;
     z-index: 2000;
-    /* TOP PRIORITY - Cover everything */
-    padding: 0;
-    /* padding handled by children */
+    padding: 80px 0 2rem 0;
+    /* Top padding for header clearance */
     gap: 0;
     box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
-    transform: translateX(-100%);
-    /* Hidden by default */
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-top: none;
-    margin-top: 0;
-    align-items: stretch;
   }
 
   .nav-links.active {
-    transform: translateX(0);
-    /* Slide in */
-  }
-
-  /* Remove old pseudo-element header if any (defensive) */
-  .nav-links::before {
-    content: none;
-  }
-
-  /* New Sidebar Header Styles (injected via JS) */
-  .sidebar-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid #eee;
-    background: #fcfcfc;
-  }
-
-  .sidebar-title {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--color-primary);
-    font-weight: 700;
-  }
-
-  .sidebar-close {
-    font-size: 1.5rem;
-    color: var(--color-text-muted);
-    cursor: pointer;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s;
-  }
-
-  .sidebar-close:hover {
-    color: var(--color-secondary);
+    /* Show when active */
   }
 
   .nav-links a {
+    display: block;
     font-size: 1.1rem;
     width: 100%;
-    padding: 1rem 2rem;
-    /* bigger touch targets */
-    border-bottom: 1px solid #f5f5f5;
+    padding: 1.2rem 2rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    background: var(--color-accent);
+  }
+
+  .nav-links a.btn {
+    margin: 1rem 2rem;
+    width: auto;
+    text-align: center;
   }
 }
 
