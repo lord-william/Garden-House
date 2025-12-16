@@ -30,6 +30,17 @@ if (mobileBtn) {
         document.body.appendChild(overlay);
     }
 
+    // Inject Sidebar Header (Title + Close Button) if not present
+    if (!navLinks.querySelector('.sidebar-header')) {
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'sidebar-header';
+        headerDiv.innerHTML = `
+      <span class="sidebar-title">Menu</span>
+      <i class="ph-bold ph-x sidebar-close"></i>
+    `;
+        navLinks.insertBefore(headerDiv, navLinks.firstChild);
+    }
+
     const toggleMenu = (show) => {
         if (show) {
             navLinks.classList.add('active');
@@ -44,19 +55,19 @@ if (mobileBtn) {
 
     mobileBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const isOpen = navLinks.classList.contains('active');
-        toggleMenu(!isOpen);
+        toggleMenu(true); // Always open when clicking hamburger
     });
 
-    // Close when clicking overlay
+    // Close events
+    const closeBtn = navLinks.querySelector('.sidebar-close');
+    if (closeBtn) closeBtn.addEventListener('click', () => toggleMenu(false));
+
     overlay.addEventListener('click', () => toggleMenu(false));
 
-    // Close when clicking a link
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => toggleMenu(false));
     });
 
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') toggleMenu(false);
     });
