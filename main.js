@@ -1,4 +1,8 @@
 import './src/style.css'
+import { inject } from '@vercel/analytics'
+
+// Initialize Vercel Analytics
+inject()
 
 // Mobile Menu
 const mobileBtn = document.getElementById('mobile-menu-btn');
