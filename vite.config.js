@@ -12,6 +12,7 @@ export default defineConfig({
                 locations: resolve(__dirname, 'locations.html'),
                 amenities: resolve(__dirname, 'amenities.html'),
                 contact: resolve(__dirname, 'contact.html'),
+                studentLife: resolve(__dirname, 'student-life.html'),
             }
         }
     }

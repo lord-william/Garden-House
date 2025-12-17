@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Life | Garden House Student Accommodation</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <!-- Overlay -->
+    <div class="menu-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-card main-nav">
+        <div class="nav-logo-container">
+            <a href="index.html">
+                <img src="/assets/logo.png" alt="Garden House Logo" class="nav-logo-img">
+            </a>
+        </div>
+        <i class="ph-bold ph-list" id="mobile-menu-btn"></i>
+        <div class="nav-links">
+            <button class="menu-close-btn"><i class="ph-bold ph-x"></i></button>
+            <a href="index.html">Home</a>
+            <a href="locations.html">Locations</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="student-life.html">Student Life</a>
+            <a href="contact.html" class="btn" style="padding: 10px 24px; font-size: 0.8rem;">Apply Now</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header style="padding-top: 150px; padding-bottom: 4rem; background: var(--color-accent);">
+        <div class="container" style="text-align: center;">
+            <h1 class="section-title">Student <span>Life</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: #666;">
+                Experience the vibrant community at Garden House. See how our students live, learn, and celebrate
+                together.
+            </p>
+        </div>
+    </header>
+
+    <!-- 2025 Farewell Party Section -->
+    <section style="padding: var(--spacing-xl) 0;">
+        <div class="container">
+            <div class="glass-card" style="padding: 3rem; max-width: 900px; margin: 0 auto;">
+                <h2 style="color: var(--color-primary); margin-bottom: 1rem; text-align: center;">
+                    <i class="ph-duotone ph-confetti" style="color: var(--color-secondary);"></i>
+                    2025 Farewell Party
+                </h2>
+                <p style="color: #666; text-align: center; margin-bottom: 2rem;">
+                    A celebration of our graduating students and the memories we've shared together.
+                </p>
+
+                <!-- Video -->
+                <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <video controls style="width: 100%; display: block;" poster="">
+                        <source src="/assets/farewell-2025.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: var(--spacing-lg) 0; background: var(--color-accent); text-align: center;">
+        <div class="container">
+            <h2 style="margin-bottom: 1rem; color: var(--color-primary);">Want to be part of our community?</h2>
+            <p style="margin-bottom: 2rem; color: #666;">Join Garden House and create unforgettable memories.</p>
+            <a href="contact.html" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #1a3c34; color: white; padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 Garden House Student Accommodation</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
